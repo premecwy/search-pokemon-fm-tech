@@ -1,3 +1,49 @@
+/* Header layout (name + image side by side) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Image container */
+.imageWrap {
+  flex-shrink: 0;
+}
+
+.image {
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Types line */
+.types {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  margin: 0.25rem 0 0 0;
+}
+
+/* Details list */
+.detailList {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.detailList li {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+/* Evolution item wrapper */
+.evoItem {
+  margin: 0;
+}
+
 .wrapper {
   margin-top: 1.75rem;
   padding: 1.25rem 0;
@@ -12,8 +58,14 @@
   border: 1px solid var(--card-border, #e5e5e5);
   border-radius: 10px;
   background: var(--background);
-  max-width: 440px;
+  max-width: 520px;
   width: 100%;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
 }
 
 .name {

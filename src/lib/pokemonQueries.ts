@@ -6,6 +6,22 @@ export const GET_POKEMON = gql`
       id
       number
       name
+      image
+      types
+      classification
+      resistant
+      weaknesses
+      maxHP
+      maxCP
+      fleeRate
+      height {
+        minimum
+        maximum
+      }
+      weight {
+        minimum
+        maximum
+      }
       attacks {
         fast {
           name
@@ -23,6 +39,7 @@ export const GET_POKEMON = gql`
         name
         number
         types
+        image
       }
     }
   }

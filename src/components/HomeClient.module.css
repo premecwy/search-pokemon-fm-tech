@@ -1,0 +1,30 @@
+.recentsWrapper {
+  margin-top: 0.75rem;
+}
+
+.recentsLabel {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.recentsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.recentsChip {
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--card-border, #e5e5e5);
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.recentsChip:hover {
+  border-color: var(--text-secondary);
+}
