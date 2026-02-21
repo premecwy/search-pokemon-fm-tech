@@ -138,14 +138,18 @@ a.secondary {
   }
 
   .page {
-    --background: #000;
-    --foreground: #000;
+    --background: #171717;
+    --foreground: #0a0a0a;
 
     --text-primary: #ededed;
-    --text-secondary: #999;
+    --text-secondary: #a3a3a3;
 
-    --button-primary-hover: #ccc;
+    --button-primary-hover: #d4d4d4;
     --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+    --button-secondary-border: #262626;
+  }
+
+  .main {
+    background-color: var(--foreground);
   }
 }

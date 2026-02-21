@@ -1,3 +1,4 @@
+/* ----- Light mode (default) ----- */
 .wrapper {
   display: flex;
   gap: 0.75rem;
@@ -12,7 +13,7 @@
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0.01em;
-  border: 1px solid var(--search-border, #e5e5e5);
+  border: 1px solid var(--search-border);
   border-radius: 6px;
   background: var(--background);
   color: black;
@@ -20,23 +21,17 @@
 }
 
 .input::placeholder {
-  color: var(--text-muted, #737373);
+  color: var(--text-muted);
 }
 
 .input:hover {
-  border-color: var(--search-border-hover, #d4d4d4);
+  border-color: var(--search-border-hover);
 }
 
 .input:focus {
   outline: none;
   border-color: var(--text-primary);
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06);
-}
-
-@media (prefers-color-scheme: dark) {
-  .input:focus {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
-  }
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
 }
 
 .button {
@@ -45,7 +40,7 @@
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.02em;
-  color: var(--button-text, #fff);
+  color: var(--button-text);
   background: var(--text-primary);
   border: none;
   border-radius: 6px;
@@ -54,9 +49,32 @@
 }
 
 .button:hover {
-  background: var(--button-primary-hover, #404040);
+  background: var(--button-primary-hover);
 }
 
 .button:active {
   opacity: 0.92;
+}
+
+/* ----- Dark mode ----- */
+@media (prefers-color-scheme: dark) {
+  .input {
+    border-color: var(--search-border);
+    background: var(--background);
+    color: white;
+  }
+
+  .input:focus {
+    border-color: var(--text-primary);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12);
+  }
+
+  .button {
+    color: var(--background);
+    background: var(--text-primary);
+  }
+
+  .button:hover {
+    background: var(--button-primary-hover);
+  }
 }
